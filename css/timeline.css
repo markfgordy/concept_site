@@ -1,0 +1,232 @@
+/* INTRO SECTION
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.intro {
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+/* TIMELINE
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.timeline ul {
+  padding: 50px 0;
+  overflow-x: hidden;
+}
+
+.timeline ul li {
+  list-style-type: none;
+  position: relative;
+  width: 6px;
+  margin: 0 auto;
+  padding-top: 50px;
+  background: #d7e4ed;
+}
+
+.timeline ul li::before {
+  content: '';
+  position: absolute;  
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #d58585;
+}
+
+.timeline ul li .job-desc
+,.timeline ul li .company-info {
+  position: relative;
+  width: 400px;
+  padding-right:15px;
+  /* background:  #d58585 */;
+}
+
+.timeline ul li .company-info {
+  padding-bottom:20px;
+}
+
+.company-info-inline {
+  display: inline-block;
+  width: inherit;
+}
+
+.timeline ul li .job-desc::befor {
+  content: '';
+  position: absolute;
+  bottom: 7px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.timeline ul li:nth-child(odd) .job-desc
+,.timeline ul li:nth-child(odd) .company-info {
+  left: 50px;
+  top:-15px;
+}
+
+.timeline ul li:nth-child(odd) .job-desc::before {
+  left: -15px;
+  border-width: 8px 16px 8px 0;
+  border-color: transparent #d58585 transparent transparent;
+}
+
+.timeline ul li:nth-child(even) .job-desc
+,.timeline ul li:nth-child(even) .company-info {
+  left: -439px;
+  top:-15px;
+}
+
+.timeline ul li:nth-child(even) .job-desc::before
+,.timeline ul li:nth-child(even) .company-info::before {
+  right: -15px;
+  border-width: 8px 0 8px 16px;
+  border-color: transparent transparent transparent #d58585;
+}
+
+.job-desc h1 {
+  display: block;
+  font-size: 1.35em;
+  font-weight: bold;
+  margin-bottom: 0px;
+  line-height: 1;
+}
+
+.company-info h1 {
+  display: block;
+  font-size: inherit;
+  font-weight: bold;
+  margin-bottom: 0px;
+  line-height: 1;
+}
+
+.job-desc h2, .company-info h2 {
+  font-size: inherit;
+  line-height: 1.5;
+  padding-bottom: 0;
+  margin:0px 0px 15px 0px;
+}
+
+.job-desc p, .company-info h3 {
+  font-size: inherit;
+  line-height: 1.5;
+  padding-bottom: 0;
+  margin:0;
+  display: inline-block;
+}
+
+.company-info a {
+  color: #449DD5;
+  opacity: .5;
+}
+.company-info a:hover {
+  opacity: 1;
+  transition: all 0.30s ease-in-out;
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+}
+
+.company-info img {
+  width: 90%;
+  max-width: 225px;
+}
+
+/* EFFECTS
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.timeline ul li::after {
+  transition: background .5s ease-in-out;
+}
+
+.timeline ul li.in-view::after {
+  background: #d58585;
+}
+
+.timeline ul li .company-info
+,.timeline ul li .job-desc {
+  visibility: hidden;
+  opacity: 0;
+  transition: all .5s ease-in-out;
+}
+
+.timeline ul li:nth-child(odd) .company-info
+,.timeline ul li:nth-child(odd) .job-desc {
+  transform: translate3d(200px, 0, 0);
+}
+
+.timeline ul li:nth-child(even) .company-info
+,.timeline ul li:nth-child(even) .job-desc {
+  transform: translate3d(-200px, 0, 0);
+}
+
+.timeline ul li.in-view .company-info
+,.timeline ul li.in-view .job-desc {
+  transform: none;
+  visibility: visible;
+  opacity: 1;
+}
+
+
+/* GENERAL MEDIA QUERIES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+@media screen and (max-width: 900px) {
+  .timeline ul li .company-info
+  ,.timeline ul li .job-desc {
+    width: 250px;
+  }
+  
+  .timeline ul li:nth-child(even) .company-info
+  ,.timeline ul li:nth-child(even) .job-desc {
+    left: -289px;
+    /*250+45-6*/
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .timeline ul li {
+    margin-left: 20px;
+  }
+  .timeline ul li .job-desc, .timeline ul li .company-info {
+    width: calc(100vw - 91px);
+    padding-right:15px;
+  }
+  .timeline ul li:nth-child(even) .job-desc, .timeline ul li:nth-child(even) .company-info {
+    left: 45px;
+    top:-10px;
+  }
+  .timeline ul li:nth-child(odd) .job-desc, .timeline ul li:nth-child(odd) .company-info {
+    left: 45px;
+    top:-10px;
+  }
+  .timeline ul li:nth-child(even) .job-desc::before, .timeline ul li:nth-child(even) .company-info::before {
+    left: -15px;
+    border-width: 8px 16px 8px 0;
+    border-color: transparent #d58585 transparent transparent;
+  }
+  .timeline ul li:nth-child(odd) .job-desc::before, .timeline ul li:nth-child(odd) .company-info::before {
+    left: -15px;
+    border-width: 8px 16px 8px 0;
+    border-color: transparent #d58585 transparent transparent;
+  }
+  .company-info img {
+    max-width: 250px;
+  }
+  
+}

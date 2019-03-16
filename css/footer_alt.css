@@ -1,0 +1,284 @@
+/* FOOTER */
+.footer-section {
+  position: relative;
+  top:100;
+  min-height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background: url('../img/container_bg.png') repeat;
+  z-index: 2;
+  -moz-transition:all 350ms cubic-bezier(.42,0,.58,1);
+  -ms-transition:all 350ms cubic-bezier(.42,0,.58,1);
+  -o-transition:all 350ms cubic-bezier(.42,0,.58,1);
+  -webkit-transition:all 350ms cubic-bezier(.42,0,.58,1);
+  transition:all 350ms cubic-bezier(.42,0,.58,1);
+}
+.footer-container {
+  overflow: hidden;
+  height: 100vh;
+  width: 90%;
+  margin: 0 auto;
+}
+
+/*====Footer Concept====*/
+.active{
+  position: fixed;
+  min-height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background: url('../img/container_bg.png') repeat;
+  z-index: 3;
+
+}
+
+.close-footer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20px;
+  height: 20px;
+}
+
+.footer-box01,.footer-box02,.footer-box03
+{
+  position: relative;
+  top: 35%;
+  float:left;
+  min-height: 300px;
+  width: calc(100% / 3);
+}
+
+@media only screen and (max-width: 768px) {
+  .footer-box01,.footer-box02,.footer-box03 {
+    
+
+  }
+}
+
+/*====Footer Concept====*/
+
+.footer-title {
+}
+.footer-title h1 {
+  color: #333;
+  opacity: .7;
+  font-size: 14px;
+  text-align: center;
+  line-height: 28px;
+  /*! padding-bottom: 10px; */
+  margin-bottom: 100px;
+  text-transform: uppercase;
+}
+
+.contact-info{
+  text-align: center;
+}
+.contact-info .email{
+  margin:0px 0px 0px 0px;
+  padding:0px 0px 0px 0px;
+}
+.contact-info a {
+  color:#333;
+  font-size: 16px;
+  margin:0;
+  padding:0;
+}
+.contact-info a:hover {
+  transition: all 0.30s ease-in-out;
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  opacity: 1;
+  color:#68B3C8;
+}
+
+.social-media {
+}
+.social-media ul {
+    text-align: center;
+}
+.social-media li {
+    display: inline-block;
+
+}
+.social-media a {
+    display: inline-block;
+    border-top: none;
+    text-align: center;
+    line-height: 80px;
+    font-size: 2em;
+    width: 80px;
+    height: 80px;
+
+    position: relative;
+    background-color: #333;
+    color: #F1F1F1;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    padding: 0;
+    margin: 10px 10px 10px 10px;
+    text-align: center;
+    -webkit-transition: opacity .3s 0s, visibility 0s 0s;
+    -moz-transition: opacity .3s 0s, visibility 0s 0s;
+    -ms-transition: opacity .3s 0s, visibility 0s 0s;
+    -o-transition: opacity .3s 0s, visibility 0s 0s;
+    transition: opacity .3s 0s, visibility 0s 0s;
+    opacity: .7;
+  }
+.social-media a:hover {
+  transition: all 0.30s ease-in-out;
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  opacity: .9;
+  color:#68B3C8;
+}
+
+/*@media only screen and (min-width: 768px) {
+  .social-media {
+    width: 100%;
+    overflow: hidden;
+  }
+  .social-media ul {
+  }
+  .social-media li {
+    display: inline-block;
+  }
+}*/
+
+.contact-me {
+  text-align: center;
+}
+.contact-me input:required {
+    box-shadow:none;
+}
+.contact-me input[type=text] {
+  width:90%;
+  max-width:500px;
+  height: 50px;
+  background: transparent;
+  opacity: .5;
+  outline: none;
+  border: 1px solid #333;
+  padding: 0px 3px 0px 5px;
+  margin: 5px 0px 5px 0px;
+  color:#333;
+  font-size: 16px;
+  font-weight: inherit;
+  font-family: inherit;
+}
+.contact-me input[type=text]:focus {
+  opacity: 1;
+  height: 50px;
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  transition: all 0.30s ease-in-out;
+  font-size: 16px;
+  color: #333;
+  font-weight: inherit;
+  font-family: inherit;
+  box-shadow:none !important;
+}
+.contact-me textarea {
+  width:90%;
+  max-width:500px;
+  height: 100px;
+  background: transparent;
+  border: 1px solid #333;
+  opacity: 0.5;
+  outline: none;
+  resize: none;
+  padding: 3px 3px 3px 5px;
+  margin: 5px 0px 5px 0px;
+  font-size: 18px;
+  color: #333;
+  font-weight: inherit;
+  font-family: inherit;
+}
+.contact-me textarea:focus {
+  opacity: 1;
+  outline: none;
+  resize: none;
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  transition: all 0.30s ease-in-out;
+  font-size: 18px;
+  color: #333;
+  font-weight: inherit;
+  font-family: inherit;
+}
+.contact-me .contact_button i {
+  width:90%;
+  max-width:500px;
+  text-align: center;
+  background: #68B3C8;
+  color: #F1F1F1;
+  padding:15px 0px; 
+  /*! border-radius: 2px; */
+  margin: 5px 0px;
+  opacity:1;
+  font-size: 1.5em;
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  transition: all 0.30s ease-in-out;
+}
+.contact-me .contact_button i:hover {
+  opacity: 1;
+  background:#70c0d6;
+  color: #FFFFFF;
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  transition: all 0.30s ease-in-out;
+}
+.contact-me .contact_button i:active {
+  -moz-box-shadow: 0 0 3px #449DD5;
+  -webkit-box-shadow: 0 0 3px #449DD5;
+  box-shadow: 0px 0px 3px #449DD5;
+}
+::-webkit-input-placeholder {
+  color: #333;
+  font-weight: 400;
+  font-size: 16px;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #333;
+  font-weight: 400;
+  font-size: 16px;
+}
+::-moz-placeholder {  /* Firefox 19+ */
+  color: #333;
+  font-weight: 400;
+  font-size: 16px;
+}
+:-ms-input-placeholder {  
+  color: #333;
+  font-weight: 400;
+  font-size: 16px;
+}
+/* IE placeholder only style */   
+input.address:-ms-input-placeholder {
+  color: #333;
+  background-color: transparent;
+  font-weight: 400;
+}
+
+/*
+.footer-banner {
+  position: relative;
+  bottom: 0;
+  width:100%;
+  min-height: 30px;
+  background: #333;
+  opacity: .3;
+} */
